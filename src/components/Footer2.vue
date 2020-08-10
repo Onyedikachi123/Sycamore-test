@@ -45,7 +45,7 @@ color: #FFFFFF;
 }
 .footer2 .brand-icon {
     float: right;
-    margin-top: 30px;
+    margin-top: 20px;
     color: #fff;
 }
 .footer2 .brand-icon svg {
