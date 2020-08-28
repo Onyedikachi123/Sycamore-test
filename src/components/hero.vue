@@ -3,15 +3,14 @@
    <b-jumbotron>
    
   <b-row>
-    <b-col>
+    <b-col cols="6">
      <h1>You deserve the very <br>best!</h1>
      <p class="jumbo-text">you can get it just now, then pay later</p>
     </b-col>
-    <b-col>
-       <b-row>
-        <b-col cols="8" sm="6"><img src="../assets/fridge.png"></b-col>
-        <b-col cols="4" sm="6"><img  class="washing-machine" src="../assets/washing-machine.png"></b-col>
-      </b-row>
+    <b-col cols="6">
+    <div id="hero-image">
+     <div id="wrapper"><img src="../assets/Layer 2 1.png" ></div> 
+    </div>
         
     </b-col>
   </b-row>
@@ -27,10 +26,22 @@
 </script>
 
 <style>
+
 .jumbotron{
    margin-top: 80px;
    padding-bottom: 0rem !important;
+}
+#hero-image {
+   background-image: url('../assets/Ellipse 1.png');
+  background-repeat: repeat-x;
+   overflow-y: hidden;
+  margin: 0 -30px;
+  position: relative;
+ 
+ 
  }
+
+
  h1{
      /* position: absolute; */
 width: 553.99px;
@@ -57,10 +68,14 @@ font-size: 15.05px;
 line-height: 26px;
  }
 
-
+.hero img {
+  width: 400px;
+  float: right;
+}
+/* 
 .jumbotron .washing-machine{
         width: 60%;
     position: absolute;
     top: 120px;
-}
+} */
 </style>

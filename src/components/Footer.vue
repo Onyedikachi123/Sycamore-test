@@ -2,15 +2,15 @@
 <div class="footer">
  <b-container>
    <b-row>
-    <b-col cols="6">
+    <b-col cols="5">
         <img class="footer-logo" src="../assets/logo.png">
         <p>At Sycamore, our primary objective is to create more opportunities to get you financially empowered
             Follow us on social media Platforms, as we make this objective a reality.
         </p>
     </b-col>
-    <b-col cols="6">
+    <b-col cols="7">
     <b-row>
-       <b-col>
+       <b-col cols="4">
            <h3>COMPANY</h3>
            <ul>
                <li>About Us</li>
@@ -20,26 +20,18 @@
                <li>Food Store</li>
            </ul>
        </b-col>
-       <b-col>
-           <h3>PRODUCTS</h3>
-           <ul>
-               <li>Invest</li>
-               <li>Borrow</li>
-               <li>Advisory</li>
-           </ul>
-       </b-col>
-       <b-col>
+       <b-col cols="4">
            <h3>LEGALS</h3>
            <ul>
                <li>Privacy Policy</li>
                <li>Terms</li>
            </ul>
        </b-col>
-       <b-col>
+       <b-col cols="4">
            <h3>COMPANY</h3>
            <ul>
-               <li> <fa-icon icon="map-marker" class="footer-icons"/> 15,</li>
-               <li><fa-icon icon="phone-alt" class="footer-icons"/> +234</li>
+               <li> <fa-icon icon="map-marker" class="footer-icons"/> 15, Modupe Johnson Crescent, Surulere, Lagos</li>
+               <li><fa-icon icon="phone-alt" class="footer-icons"/> +2348097341810</li>
            </ul>
        </b-col>
     </b-row>

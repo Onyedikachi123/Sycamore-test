@@ -52,12 +52,12 @@ font-size: 15.05px;
 line-height: 26px;
  }
  .how-it-works{
-background-image: url('../assets/happy-girl.png');
-border: 0.1px solid rgba(0, 0, 0, 0.5);
+background-image: url('../assets/Nav.png');
+border: 0.1px solid #ccc;
 box-sizing: border-box;
 border-radius: 9px;
 width: 100%;
-height: 400px;
+height: 300px;
 background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
@@ -67,12 +67,12 @@ font-family: Poppins;
 font-style: normal;
 font-weight: normal;
 font-size: 32.1797px;
-line-height: 48px;
+line-height: 0px;
 color: #E23939;
-padding: 50px 50px 20px 50px;
+padding: 46px 50px 20px 50px;
  }
  .how-it-works ul {
-       font-family: Poppins;
+    font-family: Poppins;
     padding: 0 50px;
     line-height: 40px;
 }

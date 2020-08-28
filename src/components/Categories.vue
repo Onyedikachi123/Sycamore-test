@@ -72,6 +72,8 @@ export default {};
 <style>
   .card {
       height: 50px;
+      box-shadow: 1px 4px 4px rgba(0, 0, 0, 0.03);
+      border: 0.1px solid rgba(0, 0, 0, 0.5);
   }
 
 /* headlines with lines */
