@@ -30,12 +30,13 @@
 .jumbotron{
    margin-top: 80px;
    padding-bottom: 0rem !important;
+   height: 350px;
 }
 #hero-image {
    background-image: url('../assets/Ellipse 1.png');
   background-repeat: repeat-x;
    overflow-y: hidden;
-  margin: 0 -30px;
+  margin: 56px -30px;
   position: relative;
  
  

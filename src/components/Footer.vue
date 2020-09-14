@@ -7,6 +7,9 @@
         <p>At Sycamore, our primary objective is to create more opportunities to get you financially empowered
             Follow us on social media Platforms, as we make this objective a reality.
         </p>
+        <b-button class="footer-btn"><a :href="`${publicPath}sycamore.ng-company-brochure-2020.pdf`" download>
+  Download our brochure 
+</a></b-button>
     </b-col>
     <b-col cols="7">
     <b-row>
@@ -44,7 +47,7 @@
 
 <script>
 export default {
-
+ data: () => ({ publicPath: process.env.BASE_URL })
 }
 </script>
 
@@ -97,5 +100,28 @@ list-style: none;
 .footer-icons {
 color: #63C132;
 
+}
+
+.footer-btn {
+    background-color: #63C132;
+    border: #63C132;
+    box-shadow: 0px 3px 1px -2px rgba(0,0,0,0.2), 0px 2px 2px 0px rgba(0,0,0,0.14), 0px 1px 5px 0px rgba(0,0,0,0.12);
+    border-radius: 30px;
+    padding: 10px 20px;
+}
+.footer-btn a {
+  text-decoration: none;
+  color: #fff !important;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  
+}
+.footer-btn:hover {
+    background-color: #63C132;
+}
+.footer-btn:active {
+    background-color: #63C132 !important;
 }
 </style>

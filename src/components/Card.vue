@@ -89,7 +89,10 @@
           <b-row>
             <b-col cols="8">
               <h3>Air <br />Conditioners</h3>
-              <button v-on:click="view('domestic air conditioners')" class="buy-now">
+              <button
+                v-on:click="view('domestic air conditioners')"
+                class="buy-now"
+              >
                 Buy Now <fa-icon icon="arrow-right" class="card-icons" />
               </button>
             </b-col>
@@ -105,12 +108,22 @@
 
     <!-- <Modal v-if="name" :name = "name"/> -->
 
-    <b-modal :title="name" :visible="!!products.length" :hide-footer="true" @close="close()">
-      
-      {{ name }}
+    <b-modal
+      :title="name"
+      :visible="!!products.length"
+      :hide-footer="true"
+      @close="close()"
+    >
+      <h4 class="text-center mb-5 card-modal-title"> {{ selected }} </h4>
       <template v-if="products.length">
-        <p v-for="(product, i) in products" :key="i">
-          <a href="#">{{ product.name }}</a>
+        <p
+          v-for="(product, i) in products"
+          :key="i"
+          class="text-center modal-styling"
+        >
+          <router-link :to="`/product/${product.id}`">{{
+            product.name
+          }}</router-link>
         </p>
       </template>
     </b-modal>
@@ -119,16 +132,18 @@
 
 <script>
 import products from "../products";
-console.log(products);
 
 export default {
-  components: {
-   
-  },
+  components: {},
   data() {
     return {
       name: null,
       products: [],
+      // categories: [
+      //   { id: 1, name: "" },
+      //   { id: 1, name: "" },
+      // ],
+      selected: null
     };
   },
   methods: {
@@ -136,18 +151,33 @@ export default {
       this.products = products.filter(
         (product) => product.catergory === catergory
       );
-    },
-      close() {
-        this.products = []
+      if(this.products.length) {
+        this.selected = catergory
       }
+    },
+    close() {
+      this.products = [];
+      this.selected = null
+    },
   },
 };
 </script>
 
 <style>
+.card-modal-title {
+  background-color: #e23939;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 20px;
+  margin: 0 56px;
+  font-size: 18px;
+  border-radius: 10px;
+  box-shadow: 0px 3px 1px -2px rgba(0,0,0,0.2), 0px 2px 2px 0px rgba(0,0,0,0.14), 0px 1px 5px 0px rgba(0,0,0,0.12);
+
+}
 .laptop {
   /* position: absolute; */
-  width: 500.58px;
+ width: 538.58px;
   height: 251.95px;
   color: #fff;
 
@@ -157,35 +187,35 @@ export default {
 
 .tv {
   /* position: absolute; */
-  width: 500.58px;
-  height: 251.95px;
+ width: 538.58px;
+  height: 251.95px ;
   background: #1b1333;
   border-radius: 17.1174px;
 }
 .freezers {
   /* position: absolute; */
-  width: 500.58px;
+ width: 538.58px;
   height: 251.95px;
   background: #747c98;
   border-radius: 17.1174px;
 }
 .gas {
   /* position: absolute; */
-  width: 500.58px;
+  width: 538.58px;
   height: 251.95px;
   background: #303030;
   border-radius: 17.1174px;
 }
 .gen {
   /* position: absolute; */
-  width: 500.58px;
+ width: 538.58px;
   height: 251.95px;
   background: #532010;
   border-radius: 17.1174px;
 }
 .ac {
   /* position: absolute; */
-  width: 500.58px;
+ width: 538.58px;
   height: 251.95px;
 
   background: #eef0ff;
@@ -203,6 +233,7 @@ export default {
   border-radius: 5px;
   background-color: #fff;
   font-family: Poppins;
+  box-shadow: 0px 3px 1px -2px rgba(0,0,0,0.2), 0px 2px 2px 0px rgba(0,0,0,0.14), 0px 1px 5px 0px rgba(0,0,0,0.12);
 }
 .laptop img {
   width: 265px;
@@ -356,10 +387,26 @@ export default {
   color: #000;
   font-weight: 300;
 }
- .modal-header {
-  border: none ;
+
+.modal-header {
+  border: none;
 }
 .modal-footer {
-  border: none ;
+  border: none;
+}
+
+.modal-styling {
+  background-color: #367d00;
+  padding: 10px;
+  margin: 20px 50px;
+  border-radius: 7px;
+}
+.modal-styling a {
+  color: #fff !important;
+  text-decoration: none !important;
+  font-weight: bold;
+}
+img {
+  max-width: 265px !important;
 }
 </style>

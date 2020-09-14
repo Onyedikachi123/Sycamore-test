@@ -4,7 +4,7 @@
       <div id="nav">
         <div>
           <b-navbar toggleable="lg" type="dark" variant="info">
-            <b-navbar-brand href="#"><img class="logo" src="../assets/logo.png"/></b-navbar-brand>
+            <b-navbar-brand href="/"><img class="logo" src="../assets/logo.png"/></b-navbar-brand>
 
             <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
@@ -33,11 +33,12 @@ export default {};
 
 <style>
 #nav {
-  position: absolute;
+  position: fixed;
   width: 1440px;
   height: 72px;
   left: 0px;
   top: 0px;
+  z-index: 1000;
 
   background: #ffffff;
   box-shadow: 0px 6px 4px rgba(0, 0, 0, 0.05);
@@ -118,6 +119,9 @@ export default {};
   left: 1237.33px;
   background: #63c132;
   border-radius: 61.6667px;
-  /* transform: matrix(1, 0, 0, -1, 0, 0); */
+  box-shadow: 0px 3px 1px -2px rgba(0,0,0,0.2), 0px 2px 2px 0px rgba(0,0,0,0.14), 0px 1px 5px 0px rgba(0,0,0,0.12);
+}
+.btn-sm:hover {
+  background: #63c132 !important;
 }
 </style>
